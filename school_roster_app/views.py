@@ -11,7 +11,7 @@ def index(request):
 
 def list_staff(request):
     my_data = {"staff": my_school.staff, 'school_name': my_school.name}
-    return render(request, 'list_staff.html', my_data)
+    return render(request, 'staff.html', my_data)
 
 
 def staff_detail(request, employee_id):
@@ -21,7 +21,7 @@ def staff_detail(request, employee_id):
 
 def list_students(request):
     my_data = {"students": my_school.students, 'school_name': my_school.name}
-    return render(request, 'list_students.html', my_data)
+    return render(request, 'students.html', my_data)
 
 
 def student_detail(request, student_id):

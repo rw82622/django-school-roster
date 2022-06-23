@@ -1,0 +1,9 @@
+{% extends 'layout.html' %} {% block title %}
+<title>Students</title>
+{%endblock%} {% block content %}
+<h1>All Students</h1>
+{% for item in students %}
+<h4>
+  <a href="./{{item.school_id}}/">{{item.name}}</a>
+</h4>
+{% endfor %} {% endblock %}

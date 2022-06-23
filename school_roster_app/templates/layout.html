@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
     {% block title %}
     <title>School Roster App</title>
     {% endblock %}
   </head>
   <body>
-    {% block content %}{% endblock %}
+    <div
+      style="
+        margin: 15%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      {% block content %}{% endblock %}
+    </div>
+    <footer style="text-align: center; font-size: large" class="fixed-bottom">
+      &copy 2022 Rexford Wiafe
+    </footer>
   </body>
 </html>

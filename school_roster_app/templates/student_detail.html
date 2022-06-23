@@ -2,14 +2,14 @@
 <title>Student Detail</title>
 {% endblock %} {% block content %}
 
-<ul>
+<div>
   {% for item in student %} {% if item.school_id == id %}
   <h1>Student Detail for {{ item.name }}</h1>
-  <li>Name: {{item.name}}</li>
-  <li>Age: {{item.age}}</li>
-  <li>Role: {{item.role}}</li>
-  <li>Student_id: {{item.school_id}}</li>
-  <li>Password: {{item.password}}</li>
+  <h4>Name: {{item.name}}</h4>
+  <h4>Age: {{item.age}}</h4>
+  <h4>Role: {{item.role}}</h4>
+  <h4>Student_id: {{item.school_id}}</h4>
+  <h4>Password: {{item.password}}</h4>
   {% endif %} {% endfor %}
-</ul>
+</div>
 {% endblock %}
