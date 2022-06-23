@@ -20,16 +20,6 @@ class Person:
         with open(file_path) as f:
             data = json.load(f)
             return data
-        
-        # people = []
-        
-        # with open(file_path) as csvfile:
-        #     reader = csv.DictReader(csvfile)
-        #     for row in reader:
-        #         person = cls(**row)
-        #         people.append(person)
-
-        # return people
     
 
 class Student(Person):
@@ -64,14 +54,12 @@ class School:
         for student in self.students:
             if student.school_id == school_id:
                 return student
-        
         return None
 
     def find_staff_by_id(self, employee_id):
         for staff in self.staff:
             if staff.employee_id == employee_id:
                 return staff
-        
         return None
     
     

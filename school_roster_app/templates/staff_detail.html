@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} {% block title %}
+<title>Staff Detail</title>
+{% endblock %} {% block content %}
+
+<ul>
+  {% for item in staff %} {% if item.employee_id == id %}
+  <h1>Staff Detail for {{ item.name }}</h1>
+  <li>Name: {{item.name}}</li>
+  <li>Age: {{item.age}}</li>
+  <li>Role: {{item.role}}</li>
+  <li>Employee_id: {{item.employee_id}}</li>
+  <li>Password: {{item.password}}</li>
+  {% endif %} {% endfor %}
+</ul>
+{% endblock %}

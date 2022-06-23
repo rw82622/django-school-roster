@@ -1,4 +1,6 @@
-{% extends "layout.html" %} {% block content %}
-<a href="#">View all Staff</a>
-<a href="#">View all Students</a>
+{% extends "layout.html" %} {% block title %}<title>Home</title>{% endblock %}
+{% block content %}
+<h1>Welcome to {{school_name}}</h1>
+<a href="./list_staff">View all Staff</a>
+<a href="./list_students">View all Students</a>
 {% endblock %}

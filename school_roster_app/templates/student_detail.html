@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} {% block title %}
+<title>Student Detail</title>
+{% endblock %} {% block content %}
+
+<ul>
+  {% for item in student %} {% if item.school_id == id %}
+  <h1>Student Detail for {{ item.name }}</h1>
+  <li>Name: {{item.name}}</li>
+  <li>Age: {{item.age}}</li>
+  <li>Role: {{item.role}}</li>
+  <li>Student_id: {{item.school_id}}</li>
+  <li>Password: {{item.password}}</li>
+  {% endif %} {% endfor %}
+</ul>
+{% endblock %}
