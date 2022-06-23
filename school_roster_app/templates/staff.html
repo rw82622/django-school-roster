@@ -1,8 +1,12 @@
 {% extends 'layout.html' %} {% block title %}<title>Staff</title>{% endblock %}
 {% block content %}
-<h1 style="font-size: 3em">All Staff</h1>
-{% for item in staff %}
-<h4 style="font-size: 2em">
-  <a href="./{{item.employee_id}}/">{{item.name}}</a>
-</h4>
-{% endfor %} {% endblock %}
+<div>
+  <h1 style="font-size: 3em">All Staff</h1>
+  {% for item in staff %}
+  <h4 style="font-size: 2em">
+    <a href="./{{item.employee_id}}/">{{item.name}}</a>
+  </h4>
+  {% endfor %}
+</div>
+{% endblock %}
+</div>
