@@ -1,6 +1,4 @@
 from django.db import models
-
-import csv
 import os
 import json
 
@@ -62,4 +60,11 @@ class School:
                 return staff
         return None
     
+    def add_student(self, student):
+        the_student = Student(**student) 
+        self.students.insert(0, the_student)
+    
+    def add_staff(self, staff):
+        the_staff = Staff(**staff) 
+        self.staff.insert(0, the_staff)
     

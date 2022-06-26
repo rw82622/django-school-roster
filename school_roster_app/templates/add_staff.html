@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>Add Staff</title>
+{% endblock %}
+{% block content %}
+<h2>Add Staff</h2>
+<form method="POST" style="width: 30%; padding-top: 20px">
+    {% csrf_token %}
+    <label for="name">Staff Name</label>
+    <input type="text" name="name" placeholder="Name" class="form-control"/>
+    <br />
+    <label for="age">Age</label>
+    <input type="text" name="age" placeholder="Age" class="form-control"/>
+    <br />
+    <label for="role">Role</label>
+    <input type="text" name="role" placeholder="Role" class="form-control"/>
+    <br />
+    <label for="id">Employee Id</label>
+    <input type="text" name="id" placeholder="Employee id" class="form-control"/>
+    <br />
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password" class="form-control"/>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
